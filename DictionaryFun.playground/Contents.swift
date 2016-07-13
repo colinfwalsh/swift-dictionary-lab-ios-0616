@@ -14,13 +14,14 @@
  */
 // write your code here
 
+var dictionary = ["New York" : "Albany", "Ohio" : "Columbus", "Florida" : "Tallahassee", "Georgia" : "Atlanta", "Kentucky" : "Frankfort"]
 
 
 
 /*: question2
  ### 2. What is the type of the dictionary you created in Question 1?
  */
-
+//Dictionary of string key : value pairs
 
 
 
@@ -29,7 +30,7 @@
  */
 // write your code here
 
-
+var capital : String? = dictionary["Florida"]
 
 
 /*: question4
@@ -38,7 +39,8 @@
 // write your code here
 
 
-
+if let capital = capital {
+    print("The capital of Florida is \(capital)")}
 
 /*: question5
  ### 5. Create a variable called `anotherCapital` and assign to it the value of Pennsylvania's capital from the dictionary.
@@ -46,7 +48,7 @@
 // write your code here
 
 
-
+var anotherCapital = dictionary["Pennsylvania"]
 
 /*: question6
  ### 6. Unwrap `anotherCapital` and print out the message "I don't know Pennsylvania's capital" to the console.
@@ -54,14 +56,20 @@
 // write your code here
 
 
-
+//if let anotherCapital = anotherCapital {
+//    print(anotherCapital)}else {
+//    print("I don't know Pennsylvania's capital")}
 
 /*: question7
  ### 7. Pennsylvania's capital is Harrisburg. Add it to your state capitals dictionary.
  */
 // write your code here
 
+dictionary["Pennsylvania"] = "Harrisburg"
 
+print(dictionary)
+
+anotherCapital = dictionary["Pennsylvania"]
 
 
 /*: question8
@@ -69,7 +77,9 @@
  */
 // write your code here
 
-
+if let anotherCapital = anotherCapital {
+    print(anotherCapital)}else {
+    print("I don't know Pennsylvania's capital")}
 
 
 /*: question9
@@ -77,7 +87,8 @@
  */
 // write your code here
 
-
+dictionary.removeValueForKey("Pennsylvania")
+print(dictionary)
 
 
 /*: question10
@@ -86,7 +97,7 @@
 let state = "New York"
 // write your code here
 
-
+print("The capital of \(state) is \(dictionary[state]!)")
 
 
 /*: question11
@@ -101,13 +112,18 @@ let state = "New York"
  */
 // write your code here
 
+let nirvanaBand = ["Kurt Cobain", "Krist Novoselic", "Dave Grohl"]
+let beatlesBand = ["John Lennon", "George Harrison", "Paul McCartney", "Ringo Starr"]
+let breedersBand = ["Kim Deal", "Kelley Deal", "Josephine Wiggs", "Jim Macpherson"]
+let pixiesBand = ["Frank Black", "Joey Santiago", "Kim Deal", "David Lovering"]
 
+let bandDictionary = ["Nirvana" : nirvanaBand, "The Beatles" : beatlesBand, "The Breeders" : breedersBand, "Pixies" : pixiesBand]
 
 
 /*: question12
  ### 12. What is the type of the dictionary you created in Question 11?
  */
-
+//string : [string] key value pair
 
 
 
@@ -118,7 +134,7 @@ let bandName = "Pixies"
 // write your code here
 
 
-
+print(bandDictionary[bandName]!)
 
 /*:
  [Solution](solution)
